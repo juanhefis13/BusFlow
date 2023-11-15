@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Modificar Conductor</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h1>Modificar Conductor</h1>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Agregar más campos que deseas modificar aquí -->
+        <label for="company">Compañía:</label>
+        <select name="company">
+            <option value="Buses del Gran Valparaíso S.A.">Buses del Gran Valparaíso S.A.</option>
+            <option value="Transportes Viña Bus S.A.">Transportes Viña Bus S.A.</option>
+            <option value="Transportes Sol y Mar S.A.">Transportes Sol y Mar S.A.</option>
+            <!-- Agregar más opciones de compañías aquí -->
+        </select><br>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="text" name="email" value="{{ conductor.email }}" required><br>
+
+        <label for="emergencyPhone">Número de Teléfono de Emergencia:</label>
+        <input type="text" name="emergencyPhone" value="{{ conductor.emergencyPhone }}" required><br>
+
+        <label for="fullName">Nombre Completo:</label>
+        <input type="text" name="fullName" value="{{ conductor.fullName }}" required><br>
+
+        <label for="patentNumber">Número de Patente:</label>
+        <input type="text" name="patentNumber" value="{{ conductor.patentNumber }}" required><br>
+
+        <label for="phone">Número de Teléfono:</label>
+        <input type="text" name="phone" value="{{ conductor.phone }}" required><br>
+
+        <!-- Campos de horario -->
+        <label for="horario_inicio">Hora de Inicio:</label>
+        <input type="time" name="horario_inicio" value="{{ conductor.horario_inicio }}" required><br>
+
+        <label for="horario_fin">Hora de Fin:</label>
+        <input type="time" name="horario_fin" value="{{ conductor.horario_fin }}" required><br>
+
+        <label for="ruta">Ruta (Ubicación1 - Ubicación2):</label>
+        <input type="text" name="ruta" value="{{ conductor.ruta }}" required><br>
+
+
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
+

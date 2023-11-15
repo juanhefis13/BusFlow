@@ -1,0 +1,214 @@
+/* Estilo base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7f6;
+}
+
+/* Estilo para el encabezado */
+header {
+    background: #003366; /* Azul oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em; /* Títulos grandes y llamativos */
+    margin: 0;
+    color: #007bff; /* Azul más claro */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #0056b3; /* Azul intermedio */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    background: linear-gradient(to right, #003366, #0066cc); /* Gradiente de azul oscuro a azul claro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Estilo para las tablas y celdas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+/* Estilo para los botones de modificar y eliminar */
+a.btn-modificar {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.btn-modificar:hover {
+    background-color: #0056b3; /* Azul oscuro para el hover */
+}
+
+a.btn-eliminar {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.btn-eliminar:hover {
+    background-color: #bd2130; /* Rojo oscuro para el hover */
+}
+
+/* Estilo para los encabezados de la tabla (th) */
+th {
+    background-color: #007BFF; /* Azul */
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de la tabla (td) */
+td {
+    background-color: #e7f3fe; /* Celeste muy claro */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Resaltar filas al pasar el ratón */
+tr:hover {
+    background-color: #e8f4fd; /* Celeste muy claro para el hover */
+}
+tr:hover td {
+    background-color: #d3d3d3; /* Gris para toda la fila */
+}
+
+/* Estilo para los botones y enlaces */
+a.btn, input[type="submit"] {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el botón de guardar */
+input[type="submit"] {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Verde oscuro para el hover */
+}
+/* Estilo para el botón de eliminar */
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+    color: #003366; /* Azul oscuro para las etiquetas */
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+@media (max-width: 768px) {
+    /* Estilos para la navegación y el formulario... */
+
+    /* Estilos para los botones en pantallas más pequeñas */
+    a.btn, input[type="submit"], a.btn-modificar, a.btn-eliminar {
+        width: 100%; /* Hace que los botones ocupen todo el ancho disponible */
+        box-sizing: border-box; /* Asegura que el padding no añada ancho adicional */
+        margin-bottom: 10px; /* Aumenta el espacio debajo de cada botón */
+    }
+
+    /* Estilo para las tablas en pantallas más pequeñas */
+    table, thead, tbody, th, td, tr {
+        display: block; /* Hace que la tabla se comporte como bloques apilados */
+    }
+
+    /* Oculta los encabezados de la tabla en pantallas pequeñas */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; margin-bottom: 5px; } /* Añade bordes a cada fila */
+
+    td {
+        /* Cada celda es ahora un bloque con su propio margen y padding */
+        border: none;
+        position: relative;
+        padding-left: 50%; /* Espacio para el contenido */
+        text-align: right; /* Alinea el texto a la derecha */
+        white-space: normal; /* Permite que el texto pase a la siguiente línea */
+    }
+
+    /* Estilo para los datos de la tabla (td) antes de los datos reales */
+    td:before {
+        /* Usa el atributo data-label para crear etiquetas antes de cada dato */
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%; /* Ancho de la etiqueta */
+        padding-right: 10px; /* Espacio a la derecha de la etiqueta */
+        white-space: nowrap; /* Asegura que las etiquetas sean de una sola línea */
+        text-align: left; /* Alinea el texto a la izquierda */
+        font-weight: bold; /* Hace que las etiquetas sean en negrita */
+    }
+}
+
+/* Estilos adicionales para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    /* Ajustes adicionales para pantallas muy pequeñas si son necesarios */
+}
+
+
+
+
+
+
+
+

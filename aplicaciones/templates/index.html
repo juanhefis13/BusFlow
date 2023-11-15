@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <title>Lista de Conductores</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h2>Menu de Administración</h2>
+    <h1>Lista de Conductores</h1>
+    <table>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>Correo Electrónico</th>
+            <th>Compañia</th>
+            <th>Número de Patente</th>
+            <th>Número de Teléfono</th>
+            <th>Número de Emergencia</th>
+            <th>Hora de inicio</th>
+            <th>Hora de fin</th>
+            <th>Ruta</th>
+        </tr>
+        
+        {% for conductor_id, conductor in Conductor.items %}
+        <tr>
+            <td>{{ conductor.fullName }}</td>
+            <td>{{ conductor.email }}</td>
+            <td>{{ conductor.company }}</td>
+            <td>{{ conductor.patentNumber }}</td>
+            <td>{{ conductor.phone }}</td>
+            <td>{{ conductor.emergencyPhone }}</td>
+            <td>{{ conductor.horario_inicio }}</td>
+            <td>{{ conductor.horario_fin }}</td>
+            <td>{{ conductor.ruta }}</td>
+            <td>
+                <a href="{% url 'modificar_conductor' conductor_id=conductor_id %}" class="btn btn-modificar">Modificar</a>
+                <a href="{% url 'eliminar_conductor' conductor_id %}" class="btn btn-eliminar">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+     <h1>Reportes</h1>
+    <table>
+        <tr>
+            <th>Tipo de Reporte</th>
+            <th>Nombre del Conductor</th>
+            <th>Teléfono</th>
+            <th>Patente</th>
+            <th>Fecha y Hora</th>
+        </tr>
+        {% for reporte in Reportes %}
+        <tr>
+            <td>{{ reporte.tipoReporte }}</td>
+            <td>{{ reporte.nombreConductor }}</td>
+            <td>{{ reporte.telefono }}</td>
+            <td>{{ reporte.patente }}</td>
+            <td>{{ reporte.fechahora}}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No hay reportes disponibles.</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
+
+
+

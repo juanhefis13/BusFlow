@@ -1,0 +1,106 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #9b111e;
+    color: white;
+    padding: 20px;
+    display: flex; /* Usar Flexbox */
+    justify-content: center; /* Alinear elementos hacia el extremo derecho */
+    align-items: center; /* Alineación vertical al centro */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    /* No es necesario el 'justify-content: space-between' aquí */
+}
+
+.header-icon {
+    /* Estilos para el ícono, como tamaño, etc. */
+    width: 50px; /* Ejemplo de tamaño */
+    height: auto;
+    margin-right: 10px; /* Añadir un margen a la derecha del ícono */
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Diseño de la sección principal */
+#app-screenshots {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Estilos para la descripción */
+#app-screenshots .descripcion {
+    flex-basis: 45%; /* Ajustar el ancho */
+    padding: 20px; /* Agrega espacio interno para evitar que el texto toque los bordes */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+    background-color: #f9f9f9; /* Color de fondo ligeramente diferente */
+    margin: 10px; /* Margen alrededor del contenedor */
+}
+
+#app-screenshots .descripcion p {
+    font-size: 18px; /* Tamaño de la fuente */
+    color: #444;
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    text-align: justify; /* Alineación del texto justificada para un flujo uniforme */
+}
+Explicac
+
+/* Estilos para el video */
+#app-screenshots .video {
+    flex-basis: 45%; /* Ajustar el ancho */
+    margin-left: 20px; /* Añade un margen a la izquierda para mover el video hacia la derecha */
+    /* Otras propiedades de estilo que desees aplicar */
+}
+
+video {
+    width: 40%; /* Ajusta al 100% del contenedor .video */
+    height: auto;
+    margin-left: 100px;
+}
+
+/* Estilos para el botón de descarga */
+.descargar-apk {
+    display: inline-flex; /* Cambiado a flex para alinear elementos internos */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: center; /* Alineación horizontal al centro */
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.descargar-apk img {
+    width: 30px;
+    margin-left: 10px; /* Margen a la izquierda para separar del texto */
+    order: 2; /* Coloca la imagen después del texto */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Fija el footer en una posición */
+    bottom: 0; /* Ubica el footer en la parte inferior */
+    left: 0; /* Asegura que se extienda desde el borde izquierdo */
+    width: 100%; /* Asegura que el footer se extienda a lo ancho de la pantalla */
+    z-index: 1000; /* Asegura que el footer se mantenga sobre otros elementos */
+}
+

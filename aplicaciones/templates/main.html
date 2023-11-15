@@ -1,0 +1,51 @@
+
+{% load static %}
+{% block content %}
+<head>
+    <title>Bus Flow</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<header>
+    <div class="header-content"></div>
+        <img src="{% static 'img/ic_launcher.png' %}" alt="Icono" class="header-icon">
+        <h1>Bus Flow</h1>
+    </div>
+</header>
+
+<body>
+    
+    <section id="app-screenshots">
+        <!-- Columna de Descripción -->
+        <div class="descripcion">
+            <h2>Descripción de la aplicación</h2>
+            <p>¿Necesitas conocer la ubicación de los autobuses en tu ciudad en tiempo real? Descubre BusFlow, la aplicación móvil innovadora que te mantiene informado sobre la posición exacta de tus autobuses. Con BusFlow, nunca más perderás de vista tu autobús y podrás planificar tu viaje con facilidad y precisión.
+
+                BusFlow no solo es útil para pasajeros; también está diseñada pensando en los conductores. Su interfaz amigable y práctica permite a los conductores comunicar cualquier emergencia o incidencia directamente a su empresa, mejorando la seguridad y eficiencia del servicio.
+                
+                ¡Viaja con confianza y eficiencia! Descarga BusFlow y transforma tu experiencia de transporte urbano.</p>
+                <a href="https://drive.google.com/file/d/1hp3cGaa4K_7BPOhC2vAsL9KJiVo5E-rV/view?usp=sharing" class="btn descargar-apk" target="_blank">
+                    <img src="{% static 'img/androide.png' %}" alt="Icono Android"> Descargar APK
+                </a>
+        </div>
+    
+        <!-- Columna de Video -->
+        <div class="video">
+            <video loop autoplay muted>
+                <source src="{% static 'video/busfloww.mp4' %}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </section>
+    
+
+    
+</body>
+
+<footer>
+    <p>Empresa Digital JC</p>
+    <p>Contacto: ju.lealp@duocuc.cl</p>
+</footer>
+
+
+{% endblock %}
+

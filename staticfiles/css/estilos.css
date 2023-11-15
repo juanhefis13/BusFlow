@@ -1,0 +1,164 @@
+/* Estilo base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7f6;
+}
+
+/* Estilo para el encabezado */
+header {
+    background: #003366; /* Azul oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em; /* Títulos grandes y llamativos */
+    margin: 0;
+    color: #007bff; /* Azul más claro */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #0056b3; /* Azul intermedio */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    background: linear-gradient(to right, #003366, #0066cc); /* Gradiente de azul oscuro a azul claro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Estilo para las tablas y celdas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+/* Estilo para los botones de modificar y eliminar */
+a.btn-modificar {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.btn-modificar:hover {
+    background-color: #0056b3; /* Azul oscuro para el hover */
+}
+
+a.btn-eliminar {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.btn-eliminar:hover {
+    background-color: #bd2130; /* Rojo oscuro para el hover */
+}
+
+/* Estilo para los encabezados de la tabla (th) */
+th {
+    background-color: #007BFF; /* Azul */
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las celdas de la tabla (td) */
+td {
+    background-color: #e7f3fe; /* Celeste muy claro */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las filas de la tabla al pasar el ratón */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilo para los botones y enlaces */
+a.btn, input[type="submit"] {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el botón de guardar */
+input[type="submit"] {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Verde oscuro para el hover */
+}
+/* Estilo para el botón de eliminar */
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form label {
+    color: #003366; /* Azul oscuro para las etiquetas */
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 768px) {
+    nav, form {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin-bottom: 10px;
+    }
+}
+
+
+
