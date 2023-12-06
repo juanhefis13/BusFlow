@@ -40,8 +40,18 @@
         <label for="horario_fin">Hora de Fin:</label>
         <input type="time" name="horario_fin" value="{{ conductor.horario_fin }}" required><br>
 
-        <label for="ruta">Ruta (Ubicación1 - Ubicación2):</label>
-        <input type="text" name="ruta" value="{{ conductor.ruta }}" required><br>
+        <label for="ruta">Ruta:</label>
+        <select name="ruta">
+            <option value="301" {% if conductor.ruta == "301" %}selected{% endif %}>301</option>
+            <option value="302" {% if conductor.ruta == "302" %}selected{% endif %}>302</option>
+            <option value="Quillota" {% if conductor.ruta == "Quillota" %}selected{% endif %}>Quillota</option>
+            <option value="Valparaiso" {% if conductor.ruta == "Valparaiso" %}selected{% endif %}>Valparaiso</option>
+            <option value="Concon" {% if conductor.ruta == "Concon" %}selected{% endif %}>Concon</option>
+            <option value="Quintero" {% if conductor.ruta == "Quintero" %}selected{% endif %}>Quintero</option>
+            <option value="Santiago" {% if conductor.ruta == "Santiago" %}selected{% endif %}>Santiago</option>
+            <option value="La Calera" {% if conductor.ruta == "La Calera" %}selected{% endif %}>La Calera</option>
+            <!-- Agregar más opciones de rutas aquí -->
+        </select><br>
 
 
 

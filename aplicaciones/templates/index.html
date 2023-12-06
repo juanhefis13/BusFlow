@@ -33,7 +33,7 @@
             <td>{{ conductor.horario_inicio }}</td>
             <td>{{ conductor.horario_fin }}</td>
             <td>{{ conductor.ruta }}</td>
-            <td>
+            <td class="cell-buttons">
                 <a href="{% url 'modificar_conductor' conductor_id=conductor_id %}" class="btn btn-modificar">Modificar</a>
                 <a href="{% url 'eliminar_conductor' conductor_id %}" class="btn btn-eliminar">Eliminar</a>
             </td>

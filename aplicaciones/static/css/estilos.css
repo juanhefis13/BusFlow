@@ -110,10 +110,12 @@ tr:hover td {
 /* Estilo para los botones y enlaces */
 a.btn, input[type="submit"] {
     padding: 10px 20px;
+    display: block;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    
 }
 
 /* Estilo para el botón de guardar */
@@ -152,6 +154,21 @@ form input[type="time"] {
     border-radius: 3px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1560px) {
+    /* Asegúrate de que esta clase se aplique solo a las celdas que contienen los botones */
+    td.cell-buttons {
+        display: block;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    a.btn-modificar, a.btn-eliminar {
+        margin-right: 10px;
+        flex-grow: 1;
+        min-width: 100px; /* Ajusta según el espacio que necesites para tus botones */
+    }
+}
 
 @media (max-width: 768px) {
     /* Estilos para la navegación y el formulario... */
@@ -167,6 +184,22 @@ form input[type="time"] {
     table, thead, tbody, th, td, tr {
         display: block; /* Hace que la tabla se comporte como bloques apilados */
     }
+    
+    
+        /* Estilo para la celda que contiene los botones */
+    td {
+        display: flex; /* Usa flexbox para organizar los elementos internos */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+        justify-content: flex-start; /* Alinea los elementos al inicio */
+        align-items: center; /* Alinea los elementos verticalmente en el centro */
+        padding: 8px; /* Añade un poco de padding para espaciado */
+    }
+    
+    a.btn-modificar, a.btn-eliminar {
+        width: auto; /* Usa un ancho automático en lugar de 100% */
+        margin-right: 10px; /* Añade un margen a la derecha para separar los botones */
+    }
+    
 
     /* Oculta los encabezados de la tabla en pantallas pequeñas */
     thead tr {
